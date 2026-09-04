@@ -13,25 +13,26 @@
         
         // Declare variables and values
         let userName = "Jane Doe";
-        let dailyGoal = 5; 
-        let bonusTasks = "2"; 
+        let dailyGoal = 5;
+        //FIXED: Removed parenthesis to convert bonusTasks from string to number
+        let bonusTasks = 2; 
  
         // Output message to console
-        // FIXED: Added missing parenthesis to console.log.
+        //FIXED: Added missing parenthesis to console.log
         console.log("Checking status for: " + userName); 
  
         // Calculate weekly goal based on number of workdays (5) per week
-        // FIXED: corrected typo dialyGoal > dailyGoal, changed operand from 15 to 5
+        // FIXED: changed typo dialyGoal to dailyGoal, and 15 to 5
         let weeklyGoal = dailyGoal * 5; 
  
         // Add bonusTasks to weeklyGoal. 
         // Note: Check for data type issues
-        // FIXED: changed the - operator to a + operation
+        //FIXED: changed - operator to + operator
         let totalGoal = weeklyGoal + bonusTasks; 
  
         // Output results to web page
         document.write("User: " + userName + "<br>");
-        // FIXED: Moved ending quotation to no longer encompass the + and totalGoal variable
+        //FIXED: moved closing parenthesis to no longer encompass the + and totalGoal
         document.write("Total Weekly Goal:"  + totalGoal);
  
     </script>
