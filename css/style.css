@@ -5,3 +5,13 @@ h1{
 body{
     background-color: pink;
 }
+
+input{
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+#goal-btn{
+    padding: 5px 15px;
+    cursor: pointer;
+}

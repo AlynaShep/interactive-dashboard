@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="js/script.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Document</title>
@@ -25,6 +24,22 @@
     <div class="container">
         <div class="row">
             <!-- Dashboard Content -->
+             <div class="col" id="weekly-tasks">
+                <script defer src="js/task-manager.js"></script>
+                <form>
+                    <label>Name:</label>
+                    <input type="text" id="name">
+                    <br>
+                    <label>Daily Task Goal:</label>
+                    <input type="number" id="daily-goal">
+                    <br>
+                    <label>Weekly Bonus Tasks:</label>
+                    <input type="number" id="bonus-tasks">
+                    <br>
+                    <button id="goal-btn">Submit</button>
+                </form>
+                <p id="goal-message"></p>
+             </div>
         </div>
     </div>
 </body>
