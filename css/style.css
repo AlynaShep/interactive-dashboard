@@ -15,3 +15,12 @@ input{
     padding: 5px 15px;
     cursor: pointer;
 }
+
+#convert-btn{
+    padding: 5px 15px;
+    cursor: pointer;
+}
+select{
+    margin-bottom: 12px;
+    display: inline-block;
+}

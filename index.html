@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <title>Interactive Dashboard - Shepherd</title>
      <!-- Bootstrap  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
      <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
@@ -39,6 +39,31 @@
                     <button id="goal-btn">Submit</button>
                 </form>
                 <p id="goal-message"></p>
+             </div>
+             <div class="col" id="metric-converter">
+                <script defer src="js/metric-converter.js"></script>
+                <form>
+                <label>Value:</label>
+                <input type="float" id="value">
+                <br>
+                <label>Conversion Type:</label>
+                <select id="conversions">
+                    <option value="in to cm">inches to centimeters.</option>
+                    <option value="ft to cm">feet to centimeters</option>
+                    <option value="yd to m">yards to meters</option>
+                    <option value="mi to km">miles to kilometers</option>
+                    <option value="cm to in">centimeters to inches</option>
+                    <option value="cm to ft">centimeters to feet</option>
+                    <option value="m to yd">meters to yards</option>
+                    <option value="km to mi">kilometers to miles</option>
+                </select>
+                <br>
+                <label>Perform Conversion</label>
+                <button id="convert-btn">Convert</button>
+                </form>
+                <br>
+                <p id="conversion-output"></p>
+
              </div>
         </div>
     </div>
