@@ -7,7 +7,7 @@ let answers = ["Most likely", "Yes", "Ask Again Later", "Reply Hazy, Try Again",
 function displayAnswer() {
     let index = Math.floor(Math.random() * answers.length);// selects random number to index answers array
     document.getElementById("circle").style.display = "block";// makes the circle div visible
-    document.getElementById("circle").innerHTML = answers[index];// writes the answer in the circle div
+    document.getElementById("circle").innerHTML = '<br><br><br>' + answers[index];// writes the answer in the circle div
 }
 
 
@@ -29,4 +29,13 @@ document.getElementById("reset").addEventListener("click", function (event) { //
     event.preventDefault();
     
     document.getElementById("circle").style.display = "none"; // makes circle div invisible
+});
+
+document.getElementById("addResponse").addEventListener("click", function (event){ // prompts user to add a new response to the answers array
+    event.preventDefault();
+
+    let userResponse = prompt("Enter a new 8-ball response: "); // user enters new response
+    if (userResponse){
+        answers.push(userResponse); // new response is added to end of answers array
+    }
 });
