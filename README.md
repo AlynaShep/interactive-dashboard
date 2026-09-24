@@ -48,3 +48,6 @@ INPUT value, unitS, unitE
 METRIC CONVERTER (value, unitS, unitE)
 
 END
+
+## Magic Eight Ball
+This application functions like a digital magic 8 ball. You enter a question in the input field, then hold click to shake the magic 8 ball and let go to get your answer. If you attempt to shake the magic 8 ball without asking a question, you will get an alert asking you to enter a question. You can reset the magic 8 ball with the reset button below it.
