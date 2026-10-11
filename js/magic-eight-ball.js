@@ -6,7 +6,7 @@ let answers = ["Most likely", "Yes", "Ask Again Later", "Reply Hazy, Try Again",
 // displays magic 8 ball answers
 function displayAnswer() {
     let index = Math.floor(Math.random() * answers.length);// selects random number to index answers array
-    document.getElementById("circle").style.display = "block";// makes the circle div visible
+    document.getElementById("circle").style.display = "inline-block";// makes the circle div visible
     document.getElementById("circle").innerHTML = '<br><br><br>' + answers[index];// writes the answer in the circle div
 }
 

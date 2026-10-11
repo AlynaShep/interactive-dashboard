@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0">
     <title>Interactive Dashboard - Shepherd</title>
     <!-- Bootstrap  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -31,7 +31,10 @@
             <!-- Dashboard Content -->
             <div class="col" id="weekly-tasks">
                 <script defer src="js/task-manager.js"></script>
+                <br>
+                <h2 class="heading">Weekly Tasks</h2>
                 <form>
+                    <br>
                     <label>Name:</label>
                     <input type="text" id="name">
                     <br>
@@ -40,15 +43,18 @@
                     <br>
                     <label>Weekly Bonus Tasks:</label>
                     <input type="number" id="bonus-tasks">
-                    <br>
                     <button id="goal-btn">Submit</button>
                 </form>
                 <p id="goal-message"></p>
             </div>
             <div class="col" id="metric-converter">
                 <script defer src="js/metric-converter.js"></script>
+                <br>
+                <h2 class="heading">Metric Converter</h2>
                 <form>
+                    <br>
                     <label>Value:</label>
+                    
                     <input type="float" id="value">
                     <br>
                     <label>Conversion Type:</label>
@@ -72,15 +78,15 @@
             </div>
 
             <div class="col" id="magic-eight-ball"> 
-                <script src="M6-AssignmentFiles/js/magic-eight-ball.js" defer></script>﻿
-                <link rel="stylesheet" href="M6-AssignmentFiles/css/magic-eight-ball.css">
+                <script src="js/magic-eight-ball.js" defer></script>﻿
+                <link rel="stylesheet" href="css/magic-eight-ball.css">
                 <h2 class="heading">Magic Eight Ball</h2>
                 <form>
                     <p>Type a yes/no question below, then click on the Eight Ball below to get your answer!</p>
-                    <input id="question" name="question" size="80">
+                    <input id="question" name="question" size="40">
                     <div id="magicEightBall">
                         <div id="circle"></div>
-                        <img id="ball" src="M6-AssignmentFiles/img/magic-eight-ball.png" />
+                        <img id="ball" src="img/magic-eight-ball.png" />
                     </div>
                     <button id="reset" name="reset" type="reset">Ask another question</button>
                     <button id="addResponse" name="addResponse">Add a new possible response to 8-ball</button>

@@ -1,9 +1,10 @@
 h1{
-    color : blueviolet;
+    color : rgb(98, 61, 148);
     font-size: 30px;
+    text-align: center;
 }
 body{
-    background-color: pink;
+    background-color: rgb(254, 255, 192);
 }
 
 input{
@@ -23,4 +24,26 @@ input{
 select{
     margin-bottom: 12px;
     display: inline-block;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    background-color: rgb(98, 61, 148);
+    padding: 20px;
+    justify-content: center;
+}
+
+.container div{
+    background-color: rgb(197, 170, 233);
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#weekly-tasks{
+    text-align: center;
+}
+#metric-converter{
+    text-align: center;
 }
