@@ -7,6 +7,8 @@ This project is a web-based dashboard to demonstrate interactive JavaScript feat
 - [X] Add a weekly task goal calculator
 ### Weekly Task Goals
 Weekly tasks are calculated by multiplying daily tasks by 5 (number of days in a work week), then adding the number of bonus tasks for that week. 
+### Weekly Task List
+You can now input the names of tasks to add them to a list of tasks to track them
 ## Imperial/Metric Converter
 Simple application that converts imperial units to metric and vice-versa. You input a value, the unit the value is starting in, and the unit you would like to convert it to using the units 2 letter symbol. It can perform the list of conversions below:
 - inch > centimeter
