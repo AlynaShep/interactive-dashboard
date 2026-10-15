@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A_Shepherd_Coding_Exam</title>
 </head>
+
 <body>
     <p>Alyna Shepherd</p>
     <p>aashepherd1@my.waketech.edu</p>
@@ -12,11 +14,11 @@
 
     <script defer>
 
-        function amortizationCaluclator(){
+        function amortizationCaluclator() {
             let loanAmount = prompt("Enter your loan amount (without commas): ");
             let termAmount = prompt("Enter your loan term in years (30 or 15)");
 
-            if (termAmount != 15 && termAmount != 30){
+            if (termAmount != 15 && termAmount != 30) {
                 window.alert("Error: loan term must be either 15 or 30 years!")
                 return;
             }
@@ -30,8 +32,8 @@
             loanAmount = Number(loanAmount);
             termAmount = Number(termAmount);
 
-            monthlyPayment = (((interestRate/12)*loanAmount)/(1 - Math.pow(1 +(interestRate/12), (termAmount * -12))));
-            totalInterest = (monthlyPayment * termAmount * 12)-loanAmount;
+            monthlyPayment = (((interestRate / 12) * loanAmount) / (1 - Math.pow(1 + (interestRate / 12), (termAmount * -12))));
+            totalInterest = (monthlyPayment * termAmount * 12) - loanAmount;
             mortgageAmount = loanAmount + totalInterest;
 
 
@@ -46,16 +48,15 @@
             document.getElementById("total-interest").innerHTML = "Total interest amount: " + totalInterest.toFixed(2);
             document.getElementById("total-mortgage-amount").innerHTML = "Total mortgage amount: " + mortgageAmount.toFixed(2);
 
-            while (monthlyBalance > 0 && currentMonth <= totalMonths)
-            {
+            while (monthlyBalance > 0 && currentMonth <= totalMonths) {
                 let newRow = document.createElement("tr");
                 let month = document.createElement("td");
                 let payment = document.createElement("td");
-                let balance =  document.createElement("td");
+                let balance = document.createElement("td");
 
                 monthlyBalance = monthlyBalance - monthlyPayment;
 
-                if (monthlyBalance < 0){
+                if (monthlyBalance < 0) {
                     monthlyBalance = 0;
                 }
 
@@ -69,23 +70,16 @@
                 newRow.appendChild(payment);
                 newRow.appendChild(balance);
 
-                if(monthlyBalance <=0){
+                if (monthlyBalance <= 0 || currentMonth === totalMonths) {
+                    document.getElementById("end").innerHTML = "This is the Ending amortization Calculator...";
                     break;
                 }
 
             }
 
 
-            // if balance reaches 0:
-            if (monthlyBalance == 0){
-                document.getElementById("end").innerHTML = "This is the Ending amortization Calculator...";
-            }
-            
-
-
-
         };
-        
+
 
     </script>
 
@@ -100,7 +94,6 @@
         <p id="total-mortgage-amount"></p>
         <p id="monthly-payment"></p>
         <p id="monthly-balance"></p>
-        <p id="end"></p>
 
         <table id="amortization-table">
             <tr>
@@ -110,6 +103,8 @@
             </tr>
 
         </table>
+        <p id="end"></p>
     </div>
 </body>
+
 </html>
